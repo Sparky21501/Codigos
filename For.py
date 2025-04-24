@@ -1,7 +1,3 @@
-# for i in range (1, 10):
-#   print("Esta es la tabla del", i)
-# for j in range(1, 10):
-#   print(i, "X", j, "=", i + j) 
 
 # for i in range (6):
 #  print("hola")
