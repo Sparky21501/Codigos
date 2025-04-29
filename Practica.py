@@ -162,6 +162,31 @@
 #         print(f"el numero {num} es par ")
 #     else:
 #         print(f"el numero {num} es impar ")
-        
 
+##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# impar=0
+# par=0
+# num=1
+
+# while num!=0:
+#     num=int(input("ingrese un numero 0.- para salir"))
+#     if num % 2==0:
+#         print(f"el numero es {num} es par")
+#         par += 1
+#     else:   
+#         print(f"el numero {num} es impar")
+#         impar +=  1
+# print (f"hubo {par} pares y {impar} impares")
+    
+
+ ##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+num =1 
+
+while num !=0:
+    num = int(input("ingrese un numero"))
+    if num != 0:
+        print(f"la suma de todos los numeros seria {num+0} ")
 
