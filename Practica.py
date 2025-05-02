@@ -223,38 +223,38 @@
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
     
-import time
-import random
+# import time
+# import random
 
-# dado = random.radiant (1.6)
 
-j1 = 0
-j2 = 0
-meta = 30
-turno = 0
 
-while meta != 31:
-    turno += 1
-    if turno % 2 == 0:
-        print("Turno de J1")
-        time.sleep(1)
-        dado = random.randint (1,6)
-        j1 = j1 + dado
-        print(f"El j1 saco {dado}")
-        print(f"Avanza hasta la casilla {j1}")
-    else:
-        print("turno de j2")
-        time.sleep(1)   
-        dado = random.randint (1,6)
-        j2 = j2 + dado
-        print(f"El j2 saco {dado}")
-        print (f"avanza hasta la casilla {j2}") 
+# j1 = 0
+# j2 = 0
+# meta = 30
+# turno = 0
 
-    j1 >= meta or j2 >= meta
-if j1 > j2: 
- print("El ganador es J1")
-else:
-    print("El ganador es J2")   
+# while j1 < meta and j2 < meta:
+#     turno += 1
+#     if turno % 2 == 0:
+#         print("Turno de J1")
+#         time.sleep(1)
+#         dado = random.randint (1,6)
+#         j1 = j1 + dado
+#         print(f"El j1 saco {dado}")
+#         print(f"Avanza hasta la casilla {j1}")
+#     else:
+#         print("turno de j2")
+#         time.sleep(1)   
+#         dado = random.randint (1,6)
+#         j2 = j2 + dado
+#         print(f"El j2 saco {dado}")
+#         print (f"avanza hasta la casilla {j2}") 
+
+# if j1 >=meta:
+#     print("El ganador es j1")
+# else:
+#     print("El ganador es j2")
+
 
 
 
