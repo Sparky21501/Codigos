@@ -263,14 +263,47 @@
 
 
 
-
-
-
-        
-
-
-
-
 ##-----------------------------------------------------------------------------------------------------------------------------------------------        
 
-##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# arancel=200000
+# descuento=0
+
+# print('''
+#     1.- La Florida 20%
+#     2.- La pintana 30%
+#     3.- Puente alto 25%
+#     4.- San Joaquin 15%
+# ''')
+# comuna=int(input("Seleccione una comuna:"))
+
+# if comuna == 1:
+#     descuento = 20
+# elif comuna == 2:
+#     descuento = 30
+# elif comuna == 3:
+#     descuento = 25
+# elif comuna == 4:
+#     descuento = 15
+# else:
+#     print("Seleccione una opcion valida")
+
+# grupof=int(input("Ingrese su grupo familiar (numero entero usted incluido) : "))
+
+# if grupof == 1:
+#     descuento += 2
+# elif grupof <= 4 and grupof >= 2:
+#     descuento += 3
+# elif grupof >= 5:
+#     descuento += 4
+# else: 
+#     print("Seleccione una opcion valida")
+
+# print(f"el descuento total es {descuento}")
+# desc = arancel*descuento/100
+# total = arancel - desc
+# print(f"El total a pagar es ${total}")
+
+
+
+
