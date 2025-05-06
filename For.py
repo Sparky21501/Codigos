@@ -21,10 +21,11 @@
 
 
 
-# for i in range (1,10):
-#   print("Esta es la tabla del", i)
-# for j in range(1,10):
-#  print(i,"X", j, "=",i*j)  
+# for i in range (1, 11):
+#     print("Esta es la tabla del", i)
+#     for j in range(1, 11):
+#         print(i,"X", j, "=",i*j)
+#         print()  
 
 # cant=int(input("ingrese la cantidad de nota"))
 # total=0
