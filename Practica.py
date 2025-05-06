@@ -303,7 +303,51 @@
 # desc = arancel*descuento/100
 # total = arancel - desc
 # print(f"El total a pagar es ${total}")
+##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# #  Street fighter
+
+# import random
+# import time
 
 
+# peleador1 = input("Nombre del primer peleador: ")
+# peleador2 = input("Nombre del segundo peleador: ")
+
+# hp1 = 50
+# hp2 = 50
+
+# turno = 0
+# while hp1 > 0 and hp2 > 0:
+#     print(f"turno {turno}")
+#     if turno % 2 != 0:
+#         atacante = peleador1
+#         defensor = peleador2
+#         hp_defensor = hp2
+#     else: 
+#         atacante = peleador2
+#         defensor = peleador1
+#         hp_defensor = hp1  
+
+#     daño = random.randint(3, 15)
+#     critico = random.random() < 0.2
+#     if critico:
+#         daño *= 2
+#         print ("a dado un golpe critico")
+
+#     hp_defensor -= daño
+#     if turno % 2 != 0:
+#         hp2 = max(hp_defensor, 0)
+#     else:
+#         hp1 = max(hp_defensor, 0)
+
+#     print(f"{peleador1}: {hp1} HP ")
+#     print(f"{peleador2}: {hp2} HP ")
+#     turno += 1
+#     time.sleep(2)
 
 
+# if hp1 <= 0:
+#     print (f"gana {peleador2}")
+# else:
+#     print (f"gana {peleador1}")
