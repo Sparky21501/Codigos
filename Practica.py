@@ -323,50 +323,52 @@
 # Existe posibilidad de ataque critico del 20% sera atk*2
 # gana el que le quita todo el HP al rival
 
-# import random
-# import time
+import random
+import time
 
 
-# peleador1 = input("Nombre del primer peleador: ")
-# peleador2 = input("Nombre del segundo peleador: ")
+peleador1 = input("Nombre del primer peleador: ")
+peleador2 = input("Nombre del segundo peleador: ")
 
-# hp1 = 50
-# hp2 = 50
+hp1 = 50
+hp2 = 50
 
-# turno = 0
-# while hp1 > 0 and hp2 > 0:
-#     print(f"turno {turno}")
-#     if turno % 2 != 0:
-#         atacante = peleador1
-#         defensor = peleador2
-#         hp_defensor = hp2
-#     else: 
-#         atacante = peleador2
-#         defensor = peleador1
-#         hp_defensor = hp1  
+turno = 0
+while hp1 > 0 and hp2 > 0:
+    print(f"turno {turno}")
+    if turno % 2 != 0:
+        atacante = peleador1
+        defensor = peleador2
+        hp_defensor = hp2
+    else: 
+        atacante = peleador2
+        defensor = peleador1
+        hp_defensor = hp1  
 
-#     daño = random.randint(3, 15)
-#     critico = random.random() < 0.2
-#     if critico:
-#         daño *= 2
-#         print ("a dado un golpe critico")
+    daño = random.randint(3, 15)
+    critico = random.random() < 0.2
+    if critico:
+        daño *= 2
+        print ("a dado un golpe critico")
 
-#     hp_defensor -= daño
-#     if turno % 2 != 0:
-#         hp2 = max(hp_defensor, 0)
-#     else:
-#         hp1 = max(hp_defensor, 0)
+    hp_defensor -= daño
+    if turno % 2 != 0:
+        hp2 = max(hp_defensor, 0)
+    else:
+        hp1 = max(hp_defensor, 0)
 
-#     print(f"{peleador1}: {hp1} HP ")
-#     print(f"{peleador2}: {hp2} HP ")
-#     turno += 1
-#     time.sleep(2)
+    print(f"{peleador1}: {hp1} HP ")
+    print("▄"*hp1)
+    print(f"{peleador2}: {hp2} HP ")
+    print("▄"*hp2)
 
+    turno += 1
+    time.sleep(2)
 
-# if hp1 <= 0:
-#     print (f"gana {peleador2}")
-# else:
-#     print (f"gana {peleador1}")
+if hp1 <= 0:
+    print (f"gana {peleador2}")
+else:
+    print (f"gana {peleador1}")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -521,18 +523,18 @@
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
-import random
-import colorama
-from colorama import Fore
+# import random
+# import colorama
+# from colorama import Fore
 
-num1 = int(input("Seleccione un numero: "))
-num2 = int(input("Seleccione un segundo numero mayor al anterior: "))
+# num1 = int(input("Seleccione un numero: "))
+# num2 = int(input("Seleccione un segundo numero mayor al anterior: "))
 
-if num1 > num2:
-    print("El segundo numero no puede ser menor")
-else:
-    nrandom = random.randint(num1,num2) # colocar parentesis pegado al randint sino, no funcina y sin ningun igual
-    for i in range (nrandom):
-        print(Fore.BLUE, "▄")
+# if num1 > num2:
+#     print("El segundo numero no puede ser menor")
+# else:
+#     nrandom = random.randint(num1,num2) # colocar parentesis pegado al randint sino, no funcina y sin ningun igual
+#     for i in range (nrandom):
+#         print(Fore.BLUE, "▄")
 
-print(Fore.WHITE, f"Su numero random fue: {nrandom}")
+# print(Fore.WHITE, f"Su numero random fue: {nrandom}")
