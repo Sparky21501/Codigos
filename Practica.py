@@ -117,6 +117,7 @@
 #    print("numero de intentos alcanzado perfil bloqueado")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## spermercado con while
 
 # cant = 0
@@ -180,8 +181,6 @@
 #         impar +=  1
 # print (f"hubo {par} pares y {impar} impares")
     
-##-----------------------------------------------------------------------------------------------------------------------------------------------
-
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
 # num =1 
@@ -265,6 +264,15 @@
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------        
 
+# Calcular el araccel a pagar segun grupo familiar y comuna en la que reside
+# A continuacion , los descuentos por cumuna:
+# La Florida 20%, La pintana 30%, Puente Alto 25%, San Joaquin 15%
+# Grupo familiar: 1=>2%, 2 a 4=>3%, 5 o mas=>4%
+# Preguntar al usuario en que comuna vive
+# Preguntar al usuario con cuantas personas vive
+# El arancel actual es de 200.000 por semestre
+# Basados en las respuestas del usuario  y en 
+# la informacion dada, calcular su descuento
 
 # arancel=200000
 # descuento=0
@@ -306,7 +314,14 @@
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
-# #  Street fighter
+# STREET FIGTHER #
+
+# Designe 2 peleadores solicitando sus nombres
+# cada peleador tiene 50 HP, debe mostrar la 
+# barra de energia. Las peleas son por turnos #print("[]"*20)
+# cada turno el peleador ataca entre 3 y 15
+# Existe posibilidad de ataque critico del 20% sera atk*2
+# gana el que le quita todo el HP al rival
 
 # import random
 # import time
@@ -354,3 +369,38 @@
 #     print (f"gana {peleador1}")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# # VOTATOON
+# # Designe 2 cantdidatos. Pregunte cuanto votantes son
+# # por cada votante , debe peguntar por quin votrá
+# # cuente la cantidad de votos y muestre los resultados
+# # definir quien ganó la votacion. Considere empate
+
+# candidato1 = input("Primer candidato: ")
+# candidato2 = input("Segundo candidato: ")
+
+# cantv = int(input("Ingrese la cantidad de votantes: "))
+
+# vcandidato1 = 0
+# vcandidato2 = 0
+
+# for i in range (1, cantv + 1):
+#     voto = input(f"Votante #{i}, Por quien votaras: ({candidato1}) / ({candidato2}): ")
+#     if voto == candidato1:
+#         vcandidato1 +=1
+#     elif voto == candidato2:
+#         vcandidato2 +=1
+#     else:
+#         print("Voto invalido. no se contara")
+
+# print("Resultados de la votacion")
+# print(f"{candidato1} obtuvo {vcandidato1} votos ")
+# print(f"{candidato2} obtuvo {vcandidato2} votos ")
+
+# if vcandidato1 > vcandidato2:
+#     print(f"{candidato1} Gana con: {vcandidato1} votos ")
+# elif vcandidato2 > vcandidato1:
+#     print(f"{candidato2} Gana con: {vcandidato2} votos ")
+# else:
+#     print("Es un empate")
+
