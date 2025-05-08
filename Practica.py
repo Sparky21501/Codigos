@@ -278,10 +278,10 @@
 # descuento=0
 
 # print('''
-#     1.- La Florida 20%
-#     2.- La pintana 30%
-#     3.- Puente alto 25%
-#     4.- San Joaquin 15%
+#     1.- La Florida 
+#     2.- La pintana 
+#     3.- Puente alto 
+#     4.- San Joaquin 
 # ''')
 # comuna=int(input("Seleccione una comuna:"))
 
@@ -323,52 +323,52 @@
 # Existe posibilidad de ataque critico del 20% sera atk*2
 # gana el que le quita todo el HP al rival
 
-import random
-import time
+# import random
+# import time
 
 
-peleador1 = input("Nombre del primer peleador: ")
-peleador2 = input("Nombre del segundo peleador: ")
+# peleador1 = input("Nombre del primer peleador: ")
+# peleador2 = input("Nombre del segundo peleador: ")
 
-hp1 = 50
-hp2 = 50
+# hp1 = 50
+# hp2 = 50
 
-turno = 0
-while hp1 > 0 and hp2 > 0:
-    print(f"turno {turno}")
-    if turno % 2 != 0:
-        atacante = peleador1
-        defensor = peleador2
-        hp_defensor = hp2
-    else: 
-        atacante = peleador2
-        defensor = peleador1
-        hp_defensor = hp1  
+# turno = 0
+# while hp1 > 0 and hp2 > 0:
+#     print(f"turno {turno}")
+#     if turno % 2 != 0:
+#         atacante = peleador1
+#         defensor = peleador2
+#         hp_defensor = hp2
+#     else: 
+#         atacante = peleador2
+#         defensor = peleador1
+#         hp_defensor = hp1  
 
-    daño = random.randint(3, 15)
-    critico = random.random() < 0.2
-    if critico:
-        daño *= 2
-        print ("a dado un golpe critico")
+#     daño = random.randint(3, 15)
+#     critico = random.random() < 0.2
+#     if critico:
+#         daño *= 2
+#         print ("a dado un golpe critico")
 
-    hp_defensor -= daño
-    if turno % 2 != 0:
-        hp2 = max(hp_defensor, 0)
-    else:
-        hp1 = max(hp_defensor, 0)
+#     hp_defensor -= daño
+#     if turno % 2 != 0:
+#         hp2 = max(hp_defensor, 0)
+#     else:
+#         hp1 = max(hp_defensor, 0)
 
-    print(f"{peleador1}: {hp1} HP ")
-    print("▄"*hp1)
-    print(f"{peleador2}: {hp2} HP ")
-    print("▄"*hp2)
+#     print(f"{peleador1}: {hp1} HP ")
+#     print("▄"*hp1)
+#     print(f"{peleador2}: {hp2} HP ")
+#     print("▄"*hp2)
 
-    turno += 1
-    time.sleep(2)
+#     turno += 1
+#     time.sleep(2)
 
-if hp1 <= 0:
-    print (f"gana {peleador2}")
-else:
-    print (f"gana {peleador1}")
+# if hp1 <= 0:
+#     print (f"gana {peleador2}")
+# else:
+#     print (f"gana {peleador1}")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -466,8 +466,6 @@ else:
 
 # print("Calcule su porcentaje de credito: ")
 
-
-
 # cantidad_de_ingreso = int(input('''
 #         Seleccione sus ingresos
 #  1.- 500.000 a 1.000.000
@@ -483,7 +481,7 @@ else:
 #     print(f"Usted tiene ${credito} de credito ")
 # elif cantidad_de_ingreso == 3:
 #     credito += 1000000
-#     print(f"Uestes tiene ${credito} de credito ")
+#     print(f"Usted tiene ${credito} de credito ")
 # else:
 #     print("Opcion invalida")
 
@@ -539,51 +537,94 @@ else:
 
 # print(Fore.WHITE, f"Su numero random fue: {nrandom}")
 
+##-----------------------------------------------------------------------------------------------------------------------------------------------   
+# Clasificar segun categoria y precio
+# Cat 1 +200, cat 2 +400, cat 3 +600
+# Decuento Precios : 1000 y menos;3%, entre 1001 y 5000 
+# ;5% , 5001 y mas 6%
+# Poner listado de 3 productos por categoria, las cat son 1 ,2 y 3
+# Agregar los impuestos al ´precio , segun la cat y luego 
+# aplicar descuento al total de la boleta segun el monto
+'''
+Ej:
+Producto 1, cat 2, 1500 + 400
+Producto 2 cat 1, 8000 + 200
+EL total es 10100 * - 6%
+EL total a pagar es: 9494
+'''
 
+preciofinal = 0
 
-import random
-import time
+print("------------------------")
+producto1 = int(input('''
+Eliga un porducto: 
+1.- Mouse Logitech 5990$ + 200$
+2.- Mouse Razer 2990$ + 400$
+3.- Mouse Generico 1590$ + 600$
+ '''))
+print("------------------------")
 
+if producto1 == 1:
+    preciofinal += 6990 + 200
+    print("Usted lleva un mouse Logitech")
+elif producto1 == 2:
+    preciofinal += 3990 + 400
+    print("Usted lleva un mouse Razer")
+elif producto1 == 3:
+    preciofinal += 1590 + 600
+    print("Usted lleva un mouse Generico")
+else: 
+    print("Opcion invalida")
 
-peleador1 = input("Nombre del primer peleador: ")
-peleador2 = input("Nombre del segundo peleador: ")
+print(f"Lleva {preciofinal}$")
 
-hp1 = 50
-hp2 = 50
+print("------------------------")
+producto2 = int(input('''
+Eliga otro producto: 
+1.- Teclado RedDragon 4190$ + 200$
+2.- Teclado Razer 4840$ + 400$
+3.- Teclado Logitech 3290 + 600$
+ '''))
 
-turno = 0
-while hp1 > 0 and hp2 > 0:
-    print(f"turno {turno}")
-    if turno % 2 != 0:
-        atacante = peleador1
-        defensor = peleador2
-        hp_defensor = hp2
-    else: 
-        atacante = peleador2
-        defensor = peleador1
-        hp_defensor = hp1  
-
-    daño = random.randint(3, 15)
-    critico = random.random() < 0.2
-    if critico:
-        daño *= 2
-        print ("a dado un golpe critico")
-
-    hp_defensor -= daño
-    if turno % 2 != 0:
-        hp2 = max(hp_defensor, 0)
-    else:
-        hp1 = max(hp_defensor, 0)
-
-    print(f"{peleador1}: {hp1} HP ")
-    print("▄"*hp1)
-    print(f"{peleador2}: {hp2} HP ")
-    print("▄"*hp2)
-
-    turno += 1
-    time.sleep(2)
-
-if hp1 <= 0:
-    print (f"gana {peleador2}")
+if producto2 == 1:
+    preciofinal += 4190 + 200
+    print("Usted lleva un Teclado RedDragon")
+elif producto2 == 2:
+    preciofinal += 4840 + 400
+    print("Usted lleva un Teclado Razer")
+elif producto2 ==3:
+    preciofinal += 3290 + 600
+    print("Usted lleva un Teclado Logitech")
 else:
-    print (f"gana {peleador1}")
+    print("Opcion invalida")
+
+print(f"Lleva {preciofinal}$") 
+
+print("------------------------")
+producto3 = int(input('''
+Seleccione un ultimo producto: 
+1.- Monitor 300hz 10990$ + 200
+2.- Monitor 240hz 3990$ + 400
+3.- Monitor 120hz 1490$ + 600
+ '''))
+
+if producto3 == 1:
+    preciofinal += 10990 + 200
+    print("Usted lleva un Monitor 300hz ") 
+elif producto3 == 2:
+    preciofinal += 3990 + 400
+    print("Usted lleva un Monitor 240hz")
+elif producto3 == 2:
+    preciofinal += 1490 + 600
+    print("Usted lleva un Monitor 120hz")
+else:
+    print("Seleccione una opcion valida")
+
+print(f"Lleva {preciofinal}")
+
+print("------------------------")
+preciofinal = preciofinal * 0.6 
+print(f"El total a pagar es {preciofinal}" )
+print("------------------------")
+
+##-----------------------------------------------------------------------------------------------------------------------------------------------
