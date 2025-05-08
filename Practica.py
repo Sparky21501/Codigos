@@ -296,7 +296,7 @@
 # else:
 #     print("Seleccione una opcion valida")
 
-# grupof=int(input("Ingrese su grupo familiar (numero entero usted incluido) : "))
+# grupof=int(input("Ingrese su grupo familiar contandose: "))
 
 # if grupof == 1:
 #     descuento += 2
@@ -323,50 +323,52 @@
 # Existe posibilidad de ataque critico del 20% sera atk*2
 # gana el que le quita todo el HP al rival
 
-# import random
-# import time
+import random
+import time
 
 
-# peleador1 = input("Nombre del primer peleador: ")
-# peleador2 = input("Nombre del segundo peleador: ")
+peleador1 = input("Nombre del primer peleador: ")
+peleador2 = input("Nombre del segundo peleador: ")
 
-# hp1 = 50
-# hp2 = 50
+hp1 = 50
+hp2 = 50
 
-# turno = 0
-# while hp1 > 0 and hp2 > 0:
-#     print(f"turno {turno}")
-#     if turno % 2 != 0:
-#         atacante = peleador1
-#         defensor = peleador2
-#         hp_defensor = hp2
-#     else: 
-#         atacante = peleador2
-#         defensor = peleador1
-#         hp_defensor = hp1  
+turno = 0
+while hp1 > 0 and hp2 > 0:
+    print(f"turno {turno}")
+    if turno % 2 != 0:
+        atacante = peleador1
+        defensor = peleador2
+        hp_defensor = hp2
+    else: 
+        atacante = peleador2
+        defensor = peleador1
+        hp_defensor = hp1  
 
-#     daño = random.randint(3, 15)
-#     critico = random.random() < 0.2
-#     if critico:
-#         daño *= 2
-#         print ("a dado un golpe critico")
+    daño = random.randint(3, 15)
+    critico = random.random() < 0.2
+    if critico:
+        daño *= 2
+        print ("a dado un golpe critico")
 
-#     hp_defensor -= daño
-#     if turno % 2 != 0:
-#         hp2 = max(hp_defensor, 0)
-#     else:
-#         hp1 = max(hp_defensor, 0)
+    hp_defensor -= daño
+    if turno % 2 != 0:
+        hp2 = max(hp_defensor, 0)
+    else:
+        hp1 = max(hp_defensor, 0)
 
-#     print(f"{peleador1}: {hp1} HP ")
-#     print(f"{peleador2}: {hp2} HP ")
-#     turno += 1
-#     time.sleep(2)
+    print(f"{peleador1}: {hp1} HP ")
+    print("▄"*hp1)
+    print(f"{peleador2}: {hp2} HP ")
+    print("▄"*hp2)
 
+    turno += 1
+    time.sleep(2)
 
-# if hp1 <= 0:
-#     print (f"gana {peleador2}")
-# else:
-#     print (f"gana {peleador1}")
+if hp1 <= 0:
+    print (f"gana {peleador2}")
+else:
+    print (f"gana {peleador1}")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -435,6 +437,107 @@
 #     print("Usted es Acuario")
 # elif mes == 2 and dia >18 or mes == 3 and dia <=19:
 #     print("usted es Piscis")
+
+##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# chocolate = 1
+
+# if chocolate == 1:
+#     print("Hay Chocolate ")
+# else:
+#     print("No Hay Chocolate ")
+
+
+# gta6 = 0
+
+# print("Salio GTA6 1.- Si, 0.- No ")
+# gta6=int(input())
+
+# if gta6 == 1:
+#     print("Se puede jugar")
+# else: 
+#     print("No se puede jugar")
+
+
+##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# credito =0
+
+# print("Calcule su porcentaje de credito: ")
+
+
+
+# cantidad_de_ingreso = int(input('''
+#         Seleccione sus ingresos
+#  1.- 500.000 a 1.000.000
+#  2.- 1.000.000 a 1.500.000 
+#  3.- 1.500.001 o mas
+# '''))
+
+# if cantidad_de_ingreso == 1:
+#     credito += 300000
+#     print(f"Usted tiene ${credito} de credito ")
+# elif cantidad_de_ingreso == 2:
+#     credito += 650000
+#     print(f"Usted tiene ${credito} de credito ")
+# elif cantidad_de_ingreso == 3:
+#     credito += 1000000
+#     print(f"Uestes tiene ${credito} de credito ")
+# else:
+#     print("Opcion invalida")
+
+
+# nivel_educacional = int(input('''
+#       Seleccione su nivel educacional                     
+# 1.- Basico
+# 2.- Medio
+# 3.- Superior                                                           
+# '''))
+
+# if nivel_educacional == 1:
+#     credito *= 1
+#     print(f"Su credito por el nivel educacional Basico es = ${credito} ")
+# elif nivel_educacional == 2:
+#     credito *= 1.3
+#     print(f"Su credito por el nivel educacional Medio es = ${credito} ")
+# elif nivel_educacional == 3:
+#     credito *= 1.5
+#     print(f"Su credito por el nivel educacional Superior es = ${credito} ")
+# else:
+#     print("Opcion Invalida")
+
+# nacionalidad = int(input('''
+#         Seleccione su nacionalidad
+# 1.- Chilena
+# 2.- Extranjero
+# '''))
+
+# if nacionalidad == 1:
+#     credito += 300000
+#     print(f"Su credito total es ${credito}")
+# elif nacionalidad == 2:
+#     print(f"Su Credito total es ${credito} ")
+# else:
+#    print("opcion invalida")
+
+##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# import random
+# import colorama
+# from colorama import Fore
+
+# num1 = int(input("Seleccione un numero: "))
+# num2 = int(input("Seleccione un segundo numero mayor al anterior: "))
+
+# if num1 > num2:
+#     print("El segundo numero no puede ser menor")
+# else:
+#     nrandom = random.randint(num1,num2) # colocar parentesis pegado al randint sino, no funcina y sin ningun igual
+#     for i in range (nrandom):
+#         print(Fore.BLUE, "▄")
+
+# print(Fore.WHITE, f"Su numero random fue: {nrandom}")
 
 
 
