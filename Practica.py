@@ -553,78 +553,120 @@ EL total es 10100 * - 6%
 EL total a pagar es: 9494
 '''
 
-preciofinal = 0
+# preciofinal = 0
 
-print("------------------------")
-producto1 = int(input('''
-Eliga un porducto: 
-1.- Mouse Logitech 5990$ + 200$
-2.- Mouse Razer 2990$ + 400$
-3.- Mouse Generico 1590$ + 600$
- '''))
-print("------------------------")
+# print("------------------------")
+# producto1 = int(input('''
+# Eliga un porducto: 
+# 1.- Mouse Logitech 5990$ + 200$
+# 2.- Mouse Razer 2990$ + 400$
+# 3.- Mouse Generico 1590$ + 600$
+#  '''))
+# print("------------------------")
 
-if producto1 == 1:
-    preciofinal += 6990 + 200
-    print("Usted lleva un mouse Logitech")
-elif producto1 == 2:
-    preciofinal += 3990 + 400
-    print("Usted lleva un mouse Razer")
-elif producto1 == 3:
-    preciofinal += 1590 + 600
-    print("Usted lleva un mouse Generico")
-else: 
-    print("Opcion invalida")
+# if producto1 == 1:
+#     preciofinal += 6990 + 200
+#     print("Usted lleva un mouse Logitech")
+# elif producto1 == 2:
+#     preciofinal += 3990 + 400
+#     print("Usted lleva un mouse Razer")
+# elif producto1 == 3:
+#     preciofinal += 1590 + 600
+#     print("Usted lleva un mouse Generico")
+# else: 
+#     print("Opcion invalida")
 
-print(f"Lleva {preciofinal}$")
+# print(f"Lleva {preciofinal}$")
 
-print("------------------------")
-producto2 = int(input('''
-Eliga otro producto: 
-1.- Teclado RedDragon 4190$ + 200$
-2.- Teclado Razer 4840$ + 400$
-3.- Teclado Logitech 3290 + 600$
- '''))
+# print("------------------------")
+# producto2 = int(input('''
+# Eliga otro producto: 
+# 1.- Teclado RedDragon 4190$ + 200$
+# 2.- Teclado Razer 4840$ + 400$
+# 3.- Teclado Logitech 3290 + 600$
+#  '''))
 
-if producto2 == 1:
-    preciofinal += 4190 + 200
-    print("Usted lleva un Teclado RedDragon")
-elif producto2 == 2:
-    preciofinal += 4840 + 400
-    print("Usted lleva un Teclado Razer")
-elif producto2 ==3:
-    preciofinal += 3290 + 600
-    print("Usted lleva un Teclado Logitech")
-else:
-    print("Opcion invalida")
+# if producto2 == 1:
+#     preciofinal += 4190 + 200
+#     print("Usted lleva un Teclado RedDragon")
+# elif producto2 == 2:
+#     preciofinal += 4840 + 400
+#     print("Usted lleva un Teclado Razer")
+# elif producto2 ==3:
+#     preciofinal += 3290 + 600
+#     print("Usted lleva un Teclado Logitech")
+# else:
+#     print("Opcion invalida")
 
-print(f"Lleva {preciofinal}$") 
+# print(f"Lleva {preciofinal}$") 
 
-print("------------------------")
-producto3 = int(input('''
-Seleccione un ultimo producto: 
-1.- Monitor 300hz 10990$ + 200
-2.- Monitor 240hz 3990$ + 400
-3.- Monitor 120hz 1490$ + 600
- '''))
+# print("------------------------")
+# producto3 = int(input('''
+# Seleccione un ultimo producto: 
+# 1.- Monitor 300hz 10990$ + 200
+# 2.- Monitor 240hz 3990$ + 400
+# 3.- Monitor 120hz 1490$ + 600
+#  '''))
 
-if producto3 == 1:
-    preciofinal += 10990 + 200
-    print("Usted lleva un Monitor 300hz ") 
-elif producto3 == 2:
-    preciofinal += 3990 + 400
-    print("Usted lleva un Monitor 240hz")
-elif producto3 == 2:
-    preciofinal += 1490 + 600
-    print("Usted lleva un Monitor 120hz")
-else:
-    print("Seleccione una opcion valida")
+# if producto3 == 1:
+#     preciofinal += 10990 + 200
+#     print("Usted lleva un Monitor 300hz ") 
+# elif producto3 == 2:
+#     preciofinal += 3990 + 400
+#     print("Usted lleva un Monitor 240hz")
+# elif producto3 == 2:
+#     preciofinal += 1490 + 600
+#     print("Usted lleva un Monitor 120hz")
+# else:
+#     print("Seleccione una opcion valida")
 
-print(f"Lleva {preciofinal}")
+# print(f"Lleva {preciofinal}")
 
-print("------------------------")
-preciofinal = preciofinal * 0.6 
-print(f"El total a pagar es {preciofinal}" )
-print("------------------------")
+# print("------------------------")
+# preciofinal = preciofinal * 0.6 
+# print(f"El total a pagar es {preciofinal}" )
+# print("------------------------")
 
 ##-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# # VOTATOON
+# # Designe 2 cantdidatos. Pregunte cuanto votantes son
+# # por cada votante , debe peguntar por quin votrá
+# # cuente la cantidad de votos y muestre los resultados
+# # definir quien ganó la votacion. Considere empate
+
+candidato1 = input("Ingrese nombre del candidato 1: ")
+candidato2 = input("Ingrese nombre del candidato 2: ")
+
+vcandidato1 = 0
+vcandidato2 = 0
+votonulo = 0
+cantidad_votantes = int(input("Ingrese cantidad de votantes: "))
+
+for i in range (1, cantidad_votantes + 1 ):
+    voto = input(f"#{i} Por quien votaras, ({candidato1}) // ({candidato2}) : ")
+    if voto == candidato1:
+        vcandidato1 += 1
+        print(f"Votante #{i}, Voto por el candidato 1")
+        print(f"Votos a Favor de {candidato1} = {vcandidato1}")
+    elif voto == candidato2:
+        vcandidato2 += 1
+        print(f"Votante #{i}, Voto por el candidato 2")
+        print(f"Votos a Favor de {candidato2} = {vcandidato2}")
+    else:  
+        votonulo +=1
+        print("Voto invalido, se tomara como Nulo")
+
+
+print("Resultados Finales...")
+
+if vcandidato1 > vcandidato2:
+    print(f"{candidato1} Gana las votaciones con {vcandidato1} Votos a favor")
+    print(f"{candidato2} Obtuvo solo {vcandidato2} Votos a favor")
+elif vcandidato2 > vcandidato1:
+    print(f"{candidato2} Gana las votaciones con {vcandidato2} Votos a favor")
+    print(f"{candidato1} Obtuvo solo {vcandidato1} Votos a favor")
+else:
+    print("Es un empate...")
+
+print(f"Cantidad de Votos Nulos {votonulo}")
