@@ -635,38 +635,40 @@ EL total a pagar es: 9494
 # # cuente la cantidad de votos y muestre los resultados
 # # definir quien ganó la votacion. Considere empate
 
-candidato1 = input("Ingrese nombre del candidato 1: ")
-candidato2 = input("Ingrese nombre del candidato 2: ")
+# candidato1 = input("Ingrese nombre del candidato 1: ")
+# candidato2 = input("Ingrese nombre del candidato 2: ")
 
-vcandidato1 = 0
-vcandidato2 = 0
-votonulo = 0
-cantidad_votantes = int(input("Ingrese cantidad de votantes: "))
+# vcandidato1 = 0
+# vcandidato2 = 0
+# votonulo = 0
+# cantidad_votantes = int(input("Ingrese cantidad de votantes: "))
 
-for i in range (1, cantidad_votantes + 1 ):
-    voto = input(f"#{i} Por quien votaras, ({candidato1}) // ({candidato2}) : ")
-    if voto == candidato1:
-        vcandidato1 += 1
-        print(f"Votante #{i}, Voto por el candidato 1")
-        print(f"Votos a Favor de {candidato1} = {vcandidato1}")
-    elif voto == candidato2:
-        vcandidato2 += 1
-        print(f"Votante #{i}, Voto por el candidato 2")
-        print(f"Votos a Favor de {candidato2} = {vcandidato2}")
-    else:  
-        votonulo +=1
-        print("Voto invalido, se tomara como Nulo")
+# for i in range (1, cantidad_votantes + 1 ):
+#     voto = input(f"#{i} Por quien votaras, ({candidato1}) // ({candidato2}) : ")
+#     if voto == candidato1:
+#         vcandidato1 += 1
+#         print(f"Votante #{i}, Voto por el candidato 1")
+#         print(f"Votos a Favor de {candidato1} = {vcandidato1}")
+#     elif voto == candidato2:
+#         vcandidato2 += 1
+#         print(f"Votante #{i}, Voto por el candidato 2")
+#         print(f"Votos a Favor de {candidato2} = {vcandidato2}")
+#     else:  
+#         votonulo +=1
+#         print("Voto invalido, se tomara como Nulo")
 
 
-print("Resultados Finales...")
+# print("Resultados Finales...")
 
-if vcandidato1 > vcandidato2:
-    print(f"{candidato1} Gana las votaciones con {vcandidato1} Votos a favor")
-    print(f"{candidato2} Obtuvo solo {vcandidato2} Votos a favor")
-elif vcandidato2 > vcandidato1:
-    print(f"{candidato2} Gana las votaciones con {vcandidato2} Votos a favor")
-    print(f"{candidato1} Obtuvo solo {vcandidato1} Votos a favor")
-else:
-    print("Es un empate...")
+# if vcandidato1 > vcandidato2:
+#     print(f"{candidato1} Gana las votaciones con {vcandidato1} Votos a favor")
+#     print(f"{candidato2} Obtuvo solo {vcandidato2} Votos a favor")
+# elif vcandidato2 > vcandidato1:
+#     print(f"{candidato2} Gana las votaciones con {vcandidato2} Votos a favor")
+#     print(f"{candidato1} Obtuvo solo {vcandidato1} Votos a favor")
+# else:
+#     print("Es un empate...")
 
-print(f"Cantidad de Votos Nulos {votonulo}")
+# print(f"Cantidad de Votos Nulos {votonulo}")
+
+##-----------------------------------------------------------------------------------------------------------------------------------------------
