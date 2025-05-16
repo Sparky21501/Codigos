@@ -157,91 +157,134 @@
 
 
 
+# cuenta = 0
+# harina = 0
+# aceite = 0
+# levadura = 0
+# huevo = 0
+
+# def Ingnombre():
+#     global nombre
+#     nombre = input("Ingrese su nombe")
+
+# def compras():
+#     global harina, aceite, levadura, huevo, cuenta
+#     while True:
+#         try:
+#             producto = int(input(''' Seleccione que produto llevara
+#                     1.- Harina $1.500
+#                     2.- Aceite $3.990
+#                     3.- Levadura $2.500
+#                     4.- Huevo $990
+#                     5.- Salir
+#                         '''))
+#             match producto:
+#                 case 1:
+#                     cuenta += 1500
+#                     harina = harina + 1
+#                     print("Usted lleva Harina")
+#                 case 2:
+#                     cuenta += 3990
+#                     aceite = aceite + 1
+#                     print("Usted lleva Aceite")
+#                 case 3:
+#                     cuenta += 2500
+#                     levadura = levadura + 1
+#                     print("Usted lleva Levadura")
+#                 case 4:
+#                     print("Usted lleva Huevo")
+#                     cuenta += 990
+#                     huevo = huevo + 1
+#                 case 5:
+#                     print("Saliendo")
+#                     break
+#                 case _:
+#                     print("Producto no valido")
+#         except Exception:
+#             print("Solo debe poner numeros")               
+
+# def boleta():
+#     print("-o--o--o--o--o--o--o--o--o--o--o--o--o--o--o--o--o-")
+#     print(f'''
+#             Usted lleva
+#             Harina {harina}
+#             Aceite {aceite}
+#             Levadura {levadura}
+#             Huevo {huevo}''')
+#     print(f"Su cunta seria de {cuenta}")
+#     print(f"Su cuenta con iva seria de $", cuenta * 1.19 )
+#     print()
+#     print("-o--o--o--o--o--o--o--o--o--o--o--o--o--o--o--o--o-")
 
 
 
+# while True:
+#     try:
+#         print('''Seleccione una opcion
+#              1.- Ingrese su nombre
+#             2.- Comprar
+#             3.- Boleta
+#             4.- Salir''')
+    
+#         op = int(input())
+#         match op:
+#             case 1:
+#                 Ingnombre()
+#             case 2:
+#                 compras()
+#             case 3:
+#                 boleta()
+#             case 4:
+#                 break
+#             case _:
+#                 print("Ingrese una opcion valida")
+#     except Exception:
+#         print("Solo debe ingresar Numero")
 
-cuenta = 0
-harina = 0
-aceite = 0
-levadura = 0
-huevo = 0
+# print(f"Gracias {nombre} por su compra besitos :3")
 
-def Ingnombre():
-    global nombre
-    nombre = input("Ingrese su nombe")
 
-def compras():
-    global harina, aceite, levadura, huevo, cuenta
-    while True:
-        try:
-            producto = int(input(''' Seleccione que produto llevara
-                    1.- Harina $1.500
-                    2.- Aceite $3.990
-                    3.- Levadura $2.500
-                    4.- Huevo $990
-                    5.- Salir
-                        '''))
-            match producto:
-                case 1:
-                    cuenta += 1500
-                    harina = harina + 1
-                    print("Usted lleva Harina")
-                case 2:
-                    cuenta += 3990
-                    aceite = aceite + 1
-                    print("Usted lleva Aceite")
-                case 3:
-                    cuenta += 2500
-                    levadura = levadura + 1
-                    print("Usted lleva Levadura")
-                case 4:
-                    print("Usted lleva Huevo")
-                    cuenta += 990
-                    huevo = huevo + 1
-                case 5:
-                    print("Saliendo")
-                    break
-                case _:
-                    print("Producto no valido")
-        except Exception:
-            print("Solo debe poner numeros")               
 
-def boleta():
-    print(f'''Usted lleva
-            Harina {harina}
-            Aceite {aceite}
-            Levadura {levadura}
-            Huevo {huevo}''')
-    print(f"Su cunta seria de {cuenta}")
-    print(f"Su cuenta con iva seria de $", cuenta * 1.19 )
+def cant_alumnos():
+    global alumnostotal
+    alumnostotal = int(input("Ingrese la cantidad de alumnos: "))
+    
+
+def notas_alumnos():
+    global notas_totales, i, sub_prom, x, prom, suma, promg, sumag
+    for x in range (1, alumnostotal + 1):
+        notas_totales = int(input(f"Ingrese la cantidad de notas del alumno {x}: "))
+        suma=0
+        for i in range (1, notas_totales + 1):
+            sub_prom = float(input(f"Ingrese la nota {i} del alumnos {x}: "))
+            suma=0
+            sumag=0
+
+def promedio():
+    global promg, suma, sumag, prom
+    suma = suma+sub_prom
+    prom = suma/notas_totales
+    sumag = sumag+prom
+    promg  = sumag/alumnostotal
+    print(" El promedio general es ", promg)
+
+
 
 
 
 while True:
-    try:
-        print('''Seleccione una opcion
-             1.- Ingrese su nombre
-            2.- Comprar
-            3.- Boleta
-            4.- Salir''')
-    
-        op = int(input())
-        match op:
-            case 1:
-                Ingnombre()
-            case 2:
-                compras()
-            case 3:
-                boleta()
-            case 4:
-                break
-            case _:
-                print("Ingrese una opcion valida")
-    except Exception:
-        print("Solo debe ingresar Numero")
-
-print(f"Gracias {nombre} por su compra besitos :3")
-    
-    
-
+    op = int(input(''' Seleccione una opcion
+                   1.- Ingrese cantidad de alumnos
+                   2.- Ingrese cantidad de notas x alumnos
+                   3.- Promedio de cada alumno
+                   4.- salir
+                   '''))
+    match op:
+        case 1:
+            cant_alumnos()
+        case 2:
+            notas_alumnos()
+        case 3:
+            promedio()
+        case 4:
+            break
