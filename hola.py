@@ -1,4 +1,8 @@
 
+
+# hola = input("Ingrese algo: ")
+# print(f"{hola}")
+
 # #ingreso de variables para concatenar
 # print("ingrese su nombre")
 # nombre=input()1

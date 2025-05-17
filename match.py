@@ -47,7 +47,7 @@
 #                 break
 #             case _:
 #                 print("Opcion invalida")
-
+# calcu()
 
 # def votacion():
 #     candidato1 = input("Ingrese nombre del candidato 1: ")
@@ -245,34 +245,34 @@
 
 
 
-def cant_alumnos():
-    global alumnostotal
-    alumnostotal = int(input("Ingrese la cantidad de alumnos: "))
+# def cant_alumnos():
+#     global alumnostotal
+#     alumnostotal = int(input("Ingrese la cantidad de alumnos: "))
     
 
-def notas_alumnos():
-    global notas_totales, i, x, notas, suma, alumnostotal, promedio
-    for x in range (1, alumnostotal + 1):
-        notas_totales = int(input(f"Ingrese la cantidad de notas del alumno {x}: "))
-        suma = 0
-        for i in range (1, notas_totales + 1):
-            notas = float(input(f"Ingrese la nota {i} del alumnos {x}: "))
-            suma += notas
-        promedio = suma / notas_totales
-        print(f"El promedio del alumno {x} es: {promedio} ")
+# def notas_alumnos():
+#     global notas_totales, i, x, notas, suma, alumnostotal, promedio
+#     for x in range (1, alumnostotal + 1):
+#         notas_totales = int(input(f"Ingrese la cantidad de notas del alumno {x}: "))
+#         suma = 0
+#         for i in range (1, notas_totales + 1):
+#             notas = float(input(f"Ingrese la nota {i} del alumnos {x}: "))
+#             suma += notas
+#         promedio = suma / notas_totales
+#         print(f"El promedio del alumno {x} es: {promedio} ")
 
 
 
-while True:
-    op = int(input(''' Seleccione una opcion
-                   1.- Ingrese cantidad de alumnos
-                   2.- Cantidad de notas x alumnos y su promedio 
-                   3.- salir
-                   '''))
-    match op:
-        case 1:
-            cant_alumnos()
-        case 2:
-            notas_alumnos()
-        case 3:
-            break
+# while True:
+#     op = int(input(''' Seleccione una opcion
+#                    1.- Ingrese cantidad de alumnos
+#                    2.- Cantidad de notas x alumnos y su promedio 
+#                    3.- salir
+#                    '''))
+#     match op:
+#         case 1:
+#             cant_alumnos()
+#         case 2:
+#             notas_alumnos()
+#         case 3:
+#             break
