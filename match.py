@@ -251,33 +251,25 @@ def cant_alumnos():
     
 
 def notas_alumnos():
-    global notas_totales, i, sub_prom, x, prom, suma, promg, sumag
+    global notas_totales, i, x, notas, suma, alumnostotal, promedio, sumag, promg
     for x in range (1, alumnostotal + 1):
         notas_totales = int(input(f"Ingrese la cantidad de notas del alumno {x}: "))
-        suma=0
+        suma = 0
         for i in range (1, notas_totales + 1):
-            sub_prom = float(input(f"Ingrese la nota {i} del alumnos {x}: "))
-            suma=0
-            sumag=0
-
-def promedio():
-    global promg, suma, sumag, prom
-    suma = suma+sub_prom
-    prom = suma/notas_totales
-    sumag = sumag+prom
-    promg  = sumag/alumnostotal
-    print(" El promedio general es ", promg)
-
-
+            notas = float(input(f"Ingrese la nota {i} del alumnos {x}: "))
+            suma += notas
+            
+            promedio = suma / notas_totales
+            print(f"Promedio del alumno {x} es {promedio}")
+            
 
 
 
 while True:
     op = int(input(''' Seleccione una opcion
                    1.- Ingrese cantidad de alumnos
-                   2.- Ingrese cantidad de notas x alumnos
-                   3.- Promedio de cada alumno
-                   4.- salir
+                   2.- Cantidad de notas x alumnos y su promedio 
+                   3.- salir
                    '''))
     match op:
         case 1:
@@ -285,6 +277,4 @@ while True:
         case 2:
             notas_alumnos()
         case 3:
-            promedio()
-        case 4:
             break
