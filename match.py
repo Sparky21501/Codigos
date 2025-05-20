@@ -276,3 +276,87 @@
 #             notas_alumnos()
 #         case 3:
 #             break
+
+
+# import random, time
+
+# nologrado = 0
+# logrado = 0
+# while True:
+#     try:
+#         perros = int(input("Ingrese la cantidad de perros que tiene: "))
+#         while perros < 1:
+#             print("solo numeros enteros positivos")
+#         cuota = 5
+#         break
+#     except Exception:
+#         print("Solo poner numeros entero ¡NO! texto y ¡NO! Decimales")
+        
+# print(f"La cuota minima debe de ser {cuota}, si no se cumple con esa cuota el perro no obtiene filete")
+
+
+# for x in range (1, perros + 1):
+#     time.sleep(1)
+#     conejos_ca = random.randint(0,6)
+#     print(f"El perro #{x } trajo {conejos_ca}")
+#     if conejos_ca < cuota:
+#         print(f"El perro {x } se queda sin filete :( ")
+#         nologrado += 1
+#     else:
+#         conejos_ca > cuota
+#         print(f"El perro {x} come filete :) ")
+#         logrado += 1
+# print(f"Hubieron {logrado} perros que si comieron filetes y {nologrado} perros que no obtuvieron filete ")
+
+
+pagar = 0
+autos = 0
+def pago_lavado():
+    global lavado, pagar, autos
+    while True:
+        lavado = int(input('''Seleccione una opcion de lavado
+            1.- Full $15.000
+            2.- Standart $10.000
+            3.- Basico $7.000 
+            4.- Salir
+                           '''))
+        
+        match lavado:
+            case 1:
+                pagar += 15000
+                autos += 1
+            case 2:
+                pagar += 10000
+                autos += 1
+            case 3:
+                pagar += 7000
+                autos += 1
+            case 4:
+                break
+            
+                
+def ventas_diarias():
+    print(f"La cantidad de autos lavados fueron #{autos}")
+    print(f"Las ventas diarias fueron de ${pagar}")
+
+
+while True:
+    op = int(input('''Seleccione una opcion
+               1.- Pago de lavado
+               2.- Cuota diaria del lavado
+               3.- salir
+               '''))
+    match op:
+        case 1:
+            pago_lavado()
+        case 2:
+            ventas_diarias()
+        case 3: 
+            print("Saliendo")
+            break
+    
+    
+
+
+
+
