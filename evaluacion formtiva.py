@@ -64,6 +64,8 @@ def descuento():
                 break
             elif descuento1 != "soyotaku":
                 print("Ingrese codigo valido")
+                if descuento1 == "x":
+                    break
     elif desc == 2:
         descuentof = 0
         print("Saliendo...")
