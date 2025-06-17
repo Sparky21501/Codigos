@@ -105,63 +105,63 @@
 
 
 
-# notas = [7.0, 4.6, 4.9, 7.0, 6.9]
+notas = [7.0, 4.6, 4.9, 7.0, 6.9]
 
-# while True:
-#     try:
-#         print('''
-#             1.- Ingresar nota
-#             2.- Borrar nota
-#             3.- Mostrar notas
-#             4.- Sacar promedio, nota mayor y nota menor
-#             5.- Limpiar todas las notas
-#             6.- Salir''')
-#         try:
-#             op=int(input("Seleccione una opcion : "))
-#         except Exception:
-#             print("Solo numeros sin decimales")
-#         match op:
-#             case 1:
-#                 try:
-#                     nota = float(input("Ingrese una nota : "))
-#                     notas.append(nota)
-#                 except Exception:
-#                     print("Solo debe ingresar numeros con decimal EJ: 6.0, 7.0")
-#             case 2:
-#                 try:
-#                     for x, nota in enumerate(notas):
-#                         print(x+ 1,".-", nota)
-#                     eliminar = int(input("Que nota desea eliminar : ")) -1
-#                     notas.pop(eliminar)
-#                     print("Nota eliminada")
-#                 except Exception:
-#                     print("Debe de ingresar numero de la nota, no la nota")
-#             case 3:
-#                 print("Sus notas son")
-#                 print(notas)
-#             case 4:
-#                 suma = sum(notas)
-#                 total_notas = len(notas)
-#                 promedio = suma / total_notas
-#                 print(f"Su promedio es {promedio} " )
-#                 notas.sort()
-#                 print("La nota mayor es ", notas [-1])
-#                 print("La nota menor es ", notas [0])
-#             case 5:
-#                 opc = int(input('''
-#                     Desea eliminar todas las notas
-#                     1.- Si
-#                     2.- No
-#                                 '''))
-#                 if opc == 1:
-#                     print("Borrando notas")
-#                     notas.clear()
-#                 else:
-#                     print("Abortando...")
-#             case 6:
-#                 print("Saliendo....")
-#                 break   
-#             case _:
-#                 print("Error, Opcion invalida")
-#     except Exception:
-#         print("Solo debe ingresar numero")
+while True:
+    try:
+        print('''
+            1.- Ingresar nota
+            2.- Borrar nota
+            3.- Mostrar notas
+            4.- Sacar promedio, nota mayor y nota menor
+            5.- Limpiar todas las notas
+            6.- Salir''')
+        try:
+            op=int(input("Seleccione una opcion : "))
+        except Exception:
+            print("Solo numeros sin decimales")
+        match op:
+            case 1:
+                try:
+                    nota = float(input("Ingrese una nota : "))
+                    notas.append(nota)
+                except Exception:
+                    print("Solo debe ingresar numeros con decimal EJ: 6.0, 7.0")
+            case 2:
+                try:
+                    for x, nota in enumerate(notas):
+                        print(x+ 1,".-", nota)
+                    eliminar = int(input("Que nota desea eliminar : ")) -1
+                    notas.pop(eliminar)
+                    print("Nota eliminada")
+                except Exception:
+                    print("Debe de ingresar numero de la nota, no la nota")
+            case 3:
+                print("Sus notas son")
+                print(notas)
+            case 4:
+                suma = sum(notas)
+                total_notas = len(notas)
+                promedio = suma / total_notas
+                print(f"Su promedio es {promedio} " )
+                notas.sort()
+                print("La nota mayor es ", notas [-1])
+                print("La nota menor es ", notas [0])
+            case 5:
+                opc = int(input('''
+                    Desea eliminar todas las notas
+                    1.- Si
+                    2.- No
+                                '''))
+                if opc == 1:
+                    print("Borrando notas")
+                    notas.clear()
+                else:
+                    print("Abortando...")
+            case 6:
+                print("Saliendo....")
+                break   
+            case _:
+                print("Error, Opcion invalida")
+    except Exception:
+        print("Solo debe ingresar numero")
