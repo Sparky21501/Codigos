@@ -62,12 +62,11 @@ while True:
             fruta = input("ingrese nombre de la fruta : ")
             precio = int(input("Ingrese nuevo precio : "))
             frutas[fruta]=precio
-
-
         case 3:
             for key, precio in frutas.items():
                 print(key,precio)
-            dell = input("Seleccione la fruta a borrar")
+            dell = input("Seleccione la fruta a borrar : ")
+            del frutas[dell]
             
         case 4:
             for key, precio in frutas.items():
