@@ -36,13 +36,16 @@ def agregar():
     print("Bienvenido a Garage Sparky's")
     agauto = input("Ingre Marca del vehiculo: ")
     agaño = int(input("Ingrese Año del vehiculo: "))
+    if len(str(agaño)) != 4:
+        print("Error")
+        print("Solo puede tener 4 caracter maximo y minimo")
     agpatente = input('''Ingrese pantente
                     A considerar
                     tiene que tener 4 letras minusculas y 2 numeros
                     : ''')
     if len(agpatente) != 6: # len(Nombre de variable agregada) ayuda a poner un limite de caracteres
         print("Error")
-        print("Solo puede tener 6 caracteres maximo")
+        print("Solo puede tener 6 caracteres maximo y minimo")
         return
     if not agpatente[4].isdigit():
         print("Error los ultimos 2 caracteres no son numeros")
@@ -64,8 +67,6 @@ def agregar():
         "patente": agpatente,
         "tipo" : agtipo}
     print("Auto Agregado al garage")
-
-
 
 def mostrar():
     print("****************************")
